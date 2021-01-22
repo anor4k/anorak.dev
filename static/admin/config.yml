@@ -5,14 +5,14 @@ backend:
         base_url: https://anorak.dev
 media_folder: static/images
 public_folder: /images
+site_url: https://anorak.dev/
+display_url: https://anorak.dev/
 collections:
         - name: 'posts'
           label: 'Posts'
           folder: 'content/posts'
           create: true
           slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-          editor:
-                  preview: false
           fields:
                   - { label: 'Title', name: 'title', widget: 'string' }
                   - { label: 'Publish Date', name: 'date', widget: 'datetime' }
