@@ -6,7 +6,7 @@ theme: m10c
 params:
     author: anorak
     description: Food for thought.
-    avatar: /avatar.png
+    avatar: /self.jpg
     menu_item_separator: <br>
 
     style:
