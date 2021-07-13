@@ -17,9 +17,9 @@ jobs:
           # ssh host
           host: anorak.dev
           # ssh username
-          username: noel
+          username: ${{secrets.SERVER_USER}}
           # path of ssh private key
-          key: ${{secrets.ANORAK_RSA_KEY}}
+          key: ${{secrets.SERVER_KEY}}
           # execute commands
           script: |
             cd /var/www/html/anorak.dev
