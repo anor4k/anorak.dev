@@ -24,5 +24,5 @@ jobs:
           script: |
             cd /var/www/html/anorak.dev
             git pull
-            git submodule update --recursive
+            git submodule update --recursive --remote
             hugo
