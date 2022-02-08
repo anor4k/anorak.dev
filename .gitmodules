@@ -1,6 +1,8 @@
 [submodule "themes/m10c"]
 	path = themes/m10c
 	url = git@github.com:anor4k/hugo-theme-m10c.git
+	branch = master
 [submodule "static/resume"]
 	path = static/resume
 	url = git@github.com:anor4k/resume.git
+	branch = master
