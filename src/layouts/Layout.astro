@@ -1,0 +1,51 @@
+---
+import GoogleAnalytics from "../components/GoogleAnalytics.html";
+import SidebarMainLayout from "./SidebarMainLayout.astro";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<GoogleAnalytics />
+	</head>
+	<body>
+		<SidebarMainLayout>
+			<slot />
+		</SidebarMainLayout>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: rgb(255, 175, 197);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+	}
+	body {
+		margin: 0;
+	}
+	code {
+		font-family:
+			Iosevka,
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>

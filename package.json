@@ -1,0 +1,21 @@
+{
+  "name": "anorak.dev",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.9.4",
+    "astro": "4.16.5",
+    "astro-feather-icons": "^1.0.2",
+    "astro-icon": "^1.1.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.11"
+  }
+}

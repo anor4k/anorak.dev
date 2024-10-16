@@ -1,0 +1,27 @@
+---
+import Profile from "../components/Profile.astro";
+---
+
+<header>
+    <Profile />
+</header>
+<div class="content">
+    <slot />
+</div>
+
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 18rem;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    .content {
+        margin-left: 20rem;
+        padding: 2rem;
+    }
+</style>
