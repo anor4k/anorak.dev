@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const allBlogPosts = await getCollection("blog");
+---
+
+<Layout title="Blog">
+    <ul>
+        {
+            allBlogPosts.map((post) => (
+                <li>
+                    <span class="post-date">
+                        {post.data.date.toLocaleDateString()}
+                    </span>
+                    <a class="post-title" href={`/blog/${post.slug}`}>
+                        {post.data.title}
+                    </a>
+                    <span class="post-summary">{`${post.data.summary}`}</span>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
+
+<style>
+    a:any-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    ul, li {
+        margin: 0;
+        list-style: none;
+    }
+
+    .post-date {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: var(--mutedColor);
+    }
+
+    .post-title {
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 0.5rem 0;
+    }
+
+    .post-title::before {
+        content: "»";
+        font-size: 2rem;
+        position: absolute;
+        color: var(--accent);
+        margin-left: -2rem;
+        line-height: inherit;
+    }
+
+    .post-summary {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--mutedColor);
+    }
+</style>

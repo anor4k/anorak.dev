@@ -2,9 +2,6 @@
 import { Icon } from "astro-icon/components";
 
 const title = "Anorak";
-const colorText = "rgb(255, 255, 255)";
-const colorMuted = "rgb(224, 224, 224)";
-const colorBackground = "rgb(31, 31, 31)";
 ---
 
 <div class="header">
@@ -19,7 +16,7 @@ const colorBackground = "rgb(31, 31, 31)";
     <nav class="header-menu">
         <ul>
             <li><a href="/">Home</a></li>
-            <!-- <li><a href="/blog">Blog</a></li> -->
+            <li><a href="/blog">Blog</a></li>
             <li><a href="https://resume.anorak.dev">Resume</a></li>
         </ul>
     </nav>
@@ -43,13 +40,13 @@ const colorBackground = "rgb(31, 31, 31)";
     </ul>
 </div>
 
-<style define:vars={{ colorBackground, colorMuted, colorText }}>
+<style>
     .header {
         font-family: "IBM Plex Sans", sans-serif;
         color: var(--colorText);
         display: flex;
         flex-direction: column;
-        background-color: var(--colorBackground);
+        background-color: var(--colorBackgroundSidebar);
         height: 100%;
         width: 100%;
         padding: 4rem 1rem;
